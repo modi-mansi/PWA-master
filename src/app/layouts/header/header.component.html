@@ -1,0 +1,15 @@
+<mat-toolbar color="primary">
+  <button mat-button [routerLink]="['/home']">App Name</button>
+
+  <!-- This fills the remaining space of the current row -->
+  <span class="header-space"></span>
+  <div class="menu">
+    <button mat-button [routerLink]="['/posts']">Posts</button>
+    <button mat-button [routerLink]="['/users']">Users</button>
+    <button mat-button [routerLink]="['/login']">Logout</button>
+    <span>
+      <mat-slide-toggle [checked]="isDarkTheme | async" (change)="toggleDarkTheme($event.checked)">
+      </mat-slide-toggle>
+    </span>
+  </div>
+</mat-toolbar>
